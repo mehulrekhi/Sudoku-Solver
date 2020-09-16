@@ -4,7 +4,7 @@ Print N lines containing N integers each, where jth integer int ith line denotes
 the value at ith row and jth column in sudoku grid, such that all cells are filled.
 
 Sample Input
-9
+
 5 3 0 0 7 0 0 0 0
 6 0 0 1 9 5 0 0 0
 0 9 8 0 0 0 0 6 0
@@ -24,6 +24,8 @@ Sample Output
 9 6 1 5 3 7 2 8 4
 2 8 7 4 1 9 6 3 5
 3 4 5 2 8 6 1 7 9 */
+
+//Currently the code is setup for 9x9 grid
 #include <iostream>
 using namespace std;
 
@@ -91,7 +93,7 @@ void SudokuSolver(int row, int col){
 }
 
 int main(){
-  cin >> n;
+  n = 9;
   for(int i=0;i<n;i++){
     for(int j=0;j<n;j++){
       cin >> grid[i][j];
